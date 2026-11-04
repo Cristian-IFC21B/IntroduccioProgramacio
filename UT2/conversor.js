@@ -29,9 +29,9 @@ resultadoMB = calculoBytes / bytesMB.toFixed(2);
 
 resultadoGB = calculoBytes / bytesGB.toFixed(2);
 
-console.log(`Resultado en KB: ${resultadoKB}`);
-console.log(`Resultado en MB: ${resultadoMB}`);
-console.log(`Resultado en GB: ${resultadoGB}`);
+console.log(`Resultado en KB: ${resultadoKB.toFixed(2)}`);
+console.log(`Resultado en MB: ${resultadoMB.toFixed(2)}`);
+console.log(`Resultado en GB: ${resultadoGB.toFixed(2)}`);
 
 // Parte 3
 
@@ -39,7 +39,7 @@ let calculoGB = prompt("Introduce una cantidad en GB: ")
 
 resultadoBytes = calculoGB * bytesGB.toFixed(2);
 
-console.log(`Resultado en bytes: ${resultadoBytes}`);
+console.log(`Resultado en bytes: ${resultadoBytes.toFixed(2)}`);
 
 // Parte 4
 
@@ -52,19 +52,19 @@ let velocidadConexion = prompt("Introduce tu velocidad de descarga en Mbps: ");
 
 let tamañoArchivoBytes = tamañoArchivoGB * bytesGB;
 
-console.log(tamañoArchivoBytes);
+console.log(`Tamaño del archivo en Bytes: ${tamañoArchivoBytes.toFixed(2)}`);
 
 let tamañoArchivoBits = tamañoArchivoBytes * 8;
 
-console.log(tamañoArchivoBits);
+console.log(`Tamaño del archivo en Bits: ${tamañoArchivoBits.toFixed(2)}`);
 
 // Pasar velocidad de Mbps a bits por segundo
 
 let velocidadConvertida = (velocidadConexion * bitsMbI)
 
-console.log(velocidadConvertida);
+console.log(velocidadConvertida.toFixed(2));
 
-let velocidadSegundos = velocidadConvertida /  tamañoArchivoBits;
+let velocidadSegundos = tamañoArchivoBits / velocidadConvertida;
 let velocidadMinutos = velocidadSegundos / 60;
 
-console.log(`Tiempo de descarga: ${velocidadSegundos} segundos (${velocidadMinutos} minutos)`)
+console.log(`Tiempo de descarga: ${velocidadSegundos.toFixed(2)} segundos (${velocidadMinutos.toFixed(2)} minutos)`)

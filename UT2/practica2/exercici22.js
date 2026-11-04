@@ -8,6 +8,9 @@ num1 = Number(num1);
 num2 = Number(num2);
 
 console.log("suma: " + (num1 + num2));
+console.log();
 console.log("resta: " + (num1 - num2));
+console.log();
 console.log("muliplicación: " + (num1 * num2));
+console.log();
 console.log("suma: " + (num1 / num2));
