@@ -86,3 +86,31 @@ if (primerByte >= 1 && primerByte <= 127) {
 console.log(clase);
 
 // Parte 4 -  La máscara por defecto
+
+switch (clase) {
+    case clase = "A":
+        console.log("Máscara: 255.0.0.0")
+        break;
+    case clase = "B":
+        console.log("Máscara: 255.255.0.0");
+        break;
+    case clase = "C":
+        console.log("Máscara: 255.255.255.0");
+        break;
+    case clase = "D":
+        console.log("Esta clase no tiene máscara");
+    case clase = B:
+        console.log("Esta clase no tiene máscara");
+        break;
+}
+
+// Parte 5 - Privada o pública
+
+let tipoIP = (
+    (clase === "A" && primerByte === 10) ||
+    (clase === "B" && primerByte === 172 && segundoByte >= 16 && segundoByte <= 31) ||
+    (clase === "C" && primerByte === 192 && segundoByte === 168)
+    ) ? "Privada" : ((clase === "A" || clase === "B" || clase === "C") ? "Pública" : "Especial");
+
+    console.log(`Tipo: ${tipoIP}`);
+
