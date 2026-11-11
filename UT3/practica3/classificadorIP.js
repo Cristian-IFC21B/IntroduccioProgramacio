@@ -59,8 +59,30 @@ if (cuartoByte >= 0 && cuartoByte <= 255) {
     console.log("Dirección no válida: Cada octeto debe estar entre 0 y 255")
 }
 
+if (primerByteValido == true && segundoByteValido == true && tercerByteValido == true && cuartoByteValido == true) {
+    console.log(`Dirección: ${primerByte}.${segundoByte}.${tercerByte}.${cuartoByte}`);
+}
 
-console.log(primerByteValido);
-console.log(segundoByteValido);
-console.log(tercerByteValido);
-console.log(cuartoByteValido);
+// Parte 3 - La clase
+
+let clase;
+
+if (primerByte >= 1 && primerByte <= 127) {
+    clase = "A";
+} else if (primerByte == 127) {
+    clase = "Loopback";
+} else if (primerByte >= 128 && primerByte <= 191) {
+    clase = "B";
+} else if (primerByte >= 192 && primerByte <= 223) {
+    clase = "C";
+} else if (primerByte >= 224 && primerByte <= 239) {
+    clase = "D(multicast)";
+} else if (primerByte >= 240 && primerByte <= 255) {
+    clase = "E(experimental)"
+} else {
+    clase = "Reservada"
+}
+
+console.log(clase);
+
+// Parte 4 -  La máscara por defecto
