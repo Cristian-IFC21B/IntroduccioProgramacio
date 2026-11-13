@@ -1,3 +1,5 @@
+const prompt = require("prompt-sync")();
+
 let num1 = prompt("Introduce un primer número: ");
 let num2 = prompt("Introduce un segundo número: ");
 let operador = prompt("Introduce +, -, * o /: ");
